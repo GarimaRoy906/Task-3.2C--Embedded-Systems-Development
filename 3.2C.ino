@@ -1,7 +1,6 @@
 //Grima Roy
 //2110994840
-//Task 3.2C
-
+//Task 3.2C- Create IFTTT Trigger
 
 // hp_BH1750 - Version: Latest 
 #include <hp_BH1750.h>
@@ -75,7 +74,7 @@ void onLightSensorChange()
       onSunlightChange();
       
       //Print light intensity and sunlight value
-      Serial.print("Light intensity: ");
+      Serial.print("sunlight is on: ");
       Serial.print(lightSensor);
       Serial.print("Sunlight: ON ");
     }
@@ -84,8 +83,8 @@ void onLightSensorChange()
     {
       sunlight = false;
       onSunlightChange();
-      digitalWrite(led, HIGH);
-      Serial.print("Light intensity: ");
+      digitalWrite(LED_BUILTIN, HIGH);
+      Serial.print("sunlight is off: ");
       Serial.print(lightSensor);
       Serial.print("Sunlight: OFF ");
     }
